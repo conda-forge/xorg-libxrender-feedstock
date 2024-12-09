@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 2
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
@@ -32,9 +32,9 @@ requirements:
     - make                         # [unix]
     - m2-make                      # [win]
     - {{ compiler('c') }}          # [unix]
-    - {{ stdlib("c") }}            # [unix]
+    - {{ stdlib('c') }}            # [unix]
     - {{ compiler('m2w64_c') }}    # [win]
-    - {{ stdlib("m2w64_c") }}      # [win]
+    - {{ stdlib('m2w64_c') }}      # [win]
     - autoconf                     # [unix]
     - automake                     # [unix]
     - gettext                      # [unix]
