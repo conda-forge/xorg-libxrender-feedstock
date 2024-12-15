@@ -1,9 +1,9 @@
 {% set xorg_name = "libXrender" %}
 {% set xorg_category = "lib" %}
 {% set name = "xorg-" ~ xorg_name %}
-{% set version = "0.9.11" %}
-{% set sha256 = "bc53759a3a83d1ff702fb59641b3d2f7c56e05051fa0cfa93501166fa782dc24" %}
-{% set am_version = "1.15" %} # keep synchronized with build.sh
+{% set version = "0.9.12" %}
+{% set sha256 = "b832128da48b39c8d608224481743403ad1691bf4e554e4be9c174df171d1b97" %}
+{% set am_version = "1.16" %} # keep synchronized with build.sh
 
 package:
   name: {{ name|lower }}
@@ -15,8 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  detect_binary_files_with_prefix: true
+  number: 0
   run_exports:
     - {{ pin_subpackage(name|lower, max_pin='x.x') }}
 
